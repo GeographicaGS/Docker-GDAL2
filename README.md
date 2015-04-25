@@ -6,7 +6,7 @@ GDAL 2.0 Docker image for testing purposes.
 Build image and run container (cloning this Git repository):
 
 ```bash
-$ git clone gitrepository docker_gdal2
+$ git clone https://github.com/GeographicaGS/docker-gdal2.git myfolder
 $ cd docker_gdal2
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
 $ docker build -t cayetanobv/gdal2:testing .
