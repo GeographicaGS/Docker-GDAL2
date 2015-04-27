@@ -7,4 +7,5 @@ cd /tmp/gdal2/gdal2-trunk/gdal
 make
 make install
 ldconfig
+cd /tmp && rm -R *
 exit

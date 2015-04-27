@@ -9,12 +9,16 @@ Build image and run container (cloning this Git repository):
 $ git clone https://github.com/GeographicaGS/docker-gdal2.git myfolder
 $ cd docker_gdal2
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker build -t cayetanobv/gdal2:testing .
-$ docker run $DATAFOLDER --name gdal2 -it --rm cayetanobv/gdal2:testing /bin/bash
+$ docker build -t geographica/gdal2:testing .
+$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:testing /bin/bash
 ```
 
-## Pulling image from DockerHub
-TODO
+## DockerHub
+Pulling image from DockerHub
+
+```bash
+$ docker push geographica/gdal2
+```
 
 ## GDAL 2 info
 - https://2015.foss4g-na.org/session/gdal-20-overview
