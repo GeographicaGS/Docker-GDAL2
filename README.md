@@ -17,7 +17,7 @@ $ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:testing /bin/ba
 Pulling image from DockerHub
 
 ```bash
-$ docker push geographica/gdal2
+$ docker pull geographica/gdal2
 ```
 
 ## GDAL 2 info
