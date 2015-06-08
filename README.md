@@ -25,6 +25,5 @@ $ docker pull geographica/gdal2:testing
 - http://trac.osgeo.org/gdal/wiki/GDAL20Changes
 
 ## Credits
-- https://github.com/rouault/gdal2
 - https://github.com/OSGeo/gdal
 - https://registry.hub.docker.com/u/geodata/gdal/
