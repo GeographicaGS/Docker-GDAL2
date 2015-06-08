@@ -21,8 +21,7 @@ RUN apt-get install -y \
     python-numpy \
     libspatialite-dev \
     sqlite3 \
-    wget \
-    unzip
+    wget
 
 # Get the GDAL source
 ADD ./getsources_gdal2.sh /tmp/
