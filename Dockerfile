@@ -1,5 +1,5 @@
 ##
-# cayetanobv/gdal2
+# geographica/gdal2
 #
 # This creates an Ubuntu derived base image that installs GDAL 2.
 #
