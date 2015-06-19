@@ -9,11 +9,8 @@ FROM ubuntu:trusty
 
 MAINTAINER Cayetano Benavent <cayetano.benavent@geographica.gs>
 
-# Ensure the package repository is up to date
-RUN apt-get update -y
-
 # Install basic dependencies
-RUN apt-get install -y \
+RUN apt-get update -y && apt-get install -y \
     software-properties-common \
     python-software-properties \
     build-essential \
