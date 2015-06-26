@@ -10,6 +10,7 @@ FROM ubuntu:trusty
 MAINTAINER Cayetano Benavent <cayetano.benavent@geographica.gs>
 
 # Install basic dependencies
+# Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
     software-properties-common \
     python-software-properties \
@@ -18,8 +19,18 @@ RUN apt-get update -y && apt-get install -y \
     python-numpy \
     libspatialite-dev \
     sqlite3 \
+    libpq-dev \
+    libcurl4-gnutls-dev \
+    libproj-dev \
+    libxml2-dev \
+    libgeos-dev \
+    libnetcdf-dev \
+    libpoppler-dev \
+    libspatialite-dev \
+    libhdf4-alt-dev \
+    libhdf5-serial-dev \
     wget
-
+    
 # Get the GDAL source
 ADD ./getsources_gdal2.sh /tmp/
 RUN sh /tmp/getsources_gdal2.sh
