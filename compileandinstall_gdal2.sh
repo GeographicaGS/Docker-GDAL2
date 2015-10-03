@@ -2,7 +2,7 @@
 
 # Compile and install GDAL2
 
-cd /tmp/gdal2/gdal-2.0.0/
+cd /tmp/gdal2/gdal-2.0.1/
 ./configure --with-python --with-spatialite --with-pg --with-curl
 make
 make install
