@@ -13,6 +13,11 @@ $ docker build -t geographica/gdal2:testing .
 $ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:testing /bin/bash
 ```
 
+## Versions
+Each version combination is a branch in and a tag in GitHub. These are the available versions:
+- GDAL 2.0.0
+- GDAL 2.0.1
+
 ## DockerHub
 Pulling image from DockerHub
 
