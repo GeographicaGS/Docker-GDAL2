@@ -10,6 +10,7 @@ FROM ubuntu:trusty
 MAINTAINER Cayetano Benavent <cayetano.benavent@geographica.gs>
 
 # Install basic dependencies
+# Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
     software-properties-common \
     python-software-properties \
@@ -29,7 +30,7 @@ RUN apt-get update -y && apt-get install -y \
     libhdf4-alt-dev \
     libhdf5-serial-dev \
     wget
-
+    
 # Get the GDAL source
 ADD ./getsources_gdal2.sh /tmp/
 RUN sh /tmp/getsources_gdal2.sh
