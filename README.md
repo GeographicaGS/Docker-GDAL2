@@ -9,8 +9,8 @@ Build image and run container (cloning this Git repository):
 $ git clone https://github.com/GeographicaGS/docker-gdal2.git myfolder
 $ cd docker_gdal2
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker build -t geographica/gdal2:testing .
-$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:testing /bin/bash
+$ docker build -t geographica/gdal2:v2.0.1 .
+$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:v2.0.1 /bin/bash
 ```
 
 ## Versions
