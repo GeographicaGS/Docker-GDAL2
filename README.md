@@ -22,7 +22,7 @@ Each version combination is a branch in and a tag in GitHub. These are the avail
 Pulling image from DockerHub
 
 ```bash
-$ docker pull geographica/gdal2:testing
+$ docker pull geographica/gdal2:2.0.1
 ```
 
 ## GDAL 2 info
