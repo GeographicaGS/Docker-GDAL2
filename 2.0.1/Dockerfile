@@ -3,13 +3,20 @@
 #
 # This creates an Ubuntu derived base image that installs GDAL 2.
 #
-
 # Ubuntu 14.04 Trusty Tahyr
 FROM ubuntu:trusty
 
 MAINTAINER Cayetano Benavent <cayetano.benavent@geographica.gs>
 
-# Install basic dependencies
+ENV ROOTDIR /usr/local/
+ENV GDAL_VERSION 2.0.1
+
+# Load assets
+WORKDIR $ROOTDIR/
+
+ADD http://download.osgeo.org/gdal/2.0.1/gdal-${GDAL_VERSION}.tar.gz $ROOTDIR/src/
+ADD compile.sh $ROOTDIR/src/
+
 # Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
     software-properties-common \
@@ -31,13 +38,12 @@ RUN apt-get update -y && apt-get install -y \
     libhdf5-serial-dev \
     wget
     
-# Get the GDAL source
-ADD ./getsources_gdal2.sh /tmp/
-RUN sh /tmp/getsources_gdal2.sh
-
 # Compile and install GDAL
-ADD ./compileandinstall_gdal2.sh /tmp/
-RUN sh /tmp/compileandinstall_gdal2.sh
+
+RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
+    && ./configure --with-python --with-spatialite --with-pg --with-curl \
+    && make && make install && ldconfig \
+    && rm -Rf src && apt-get remove -y --purge build-essential wget
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
