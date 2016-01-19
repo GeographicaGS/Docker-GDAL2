@@ -1,6 +1,6 @@
 # Docker GDAL2
 
-GDAL 2.0 Docker image for testing purposes.
+GDAL2 Docker images.
 
 ## Building image clonning this repository
 Build image and run container (cloning this Git repository):
@@ -14,9 +14,11 @@ $ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:v2.0.1 /bin/bas
 ```
 
 ## Versions
-Each version combination is a branch in and a tag in GitHub. These are the available versions:
-- GDAL 2.0.0
+The philosophy behind Git / Docker tags correlation we ended up using is simple: the master branch of this repo contains as many folders containing different Docker image builds as Docker tags we like to have. We don't use Git tags nor branches to try to correlate with Docker tags. We try this in the past and was a mess. Each version packages makes a folder, each folder builds a __geographica/gdal2__ Docker tag bundling different library versions.
+
+These are the available versions:
 - GDAL 2.0.1
+- Daily - Nightly Snapshots; to test new features (use at your own risk!!).
 
 ## DockerHub
 Pulling image from DockerHub
