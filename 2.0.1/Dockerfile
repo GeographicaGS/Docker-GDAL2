@@ -14,8 +14,7 @@ ENV GDAL_VERSION 2.0.1
 # Load assets
 WORKDIR $ROOTDIR/
 
-ADD http://download.osgeo.org/gdal/2.0.1/gdal-${GDAL_VERSION}.tar.gz $ROOTDIR/src/
-ADD compile.sh $ROOTDIR/src/
+ADD http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz $ROOTDIR/src/
 
 # Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
@@ -37,7 +36,7 @@ RUN apt-get update -y && apt-get install -y \
     libhdf4-alt-dev \
     libhdf5-serial-dev \
     wget
-    
+
 # Compile and install GDAL
 
 RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
