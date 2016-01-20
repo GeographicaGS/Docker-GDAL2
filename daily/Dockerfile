@@ -40,11 +40,15 @@ RUN GDAL_DAILY_FL=$(wget -O - $GDAL_DAILY_URL \
     | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' \
     | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' \
     | grep -e 'gdal-svn-trunk-[0-9]*.[0-9]*.[0-9]*.tar.gz$') \
-    && cd src && wget $GDAL_DAILY_URL$GDAL_DAILY_FL \
-    && tar -xvf ${GDAL_DAILY_FL} && cd ${GDAL_DAILY_FL%.tar.gz} \
+    && cd src \
+    && wget $GDAL_DAILY_URL$GDAL_DAILY_FL \
+    && tar -xvf ${GDAL_DAILY_FL} \
+    && cd ${GDAL_DAILY_FL%.tar.gz} \
     && ./configure --with-python --with-spatialite --with-pg --with-curl \
     && make && make install && ldconfig \
-    && rm -Rf src && apt-get remove -y --purge build-essential wget
+    && rm -Rf $ROOTDIR/src/* \
+    && apt-get update -y \
+    && apt-get remove -y --purge build-essential wget
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
