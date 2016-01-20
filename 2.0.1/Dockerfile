@@ -42,7 +42,9 @@ RUN apt-get update -y && apt-get install -y \
 RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
     && ./configure --with-python --with-spatialite --with-pg --with-curl \
     && make && make install && ldconfig \
-    && rm -Rf src && apt-get remove -y --purge build-essential wget
+    && rm -Rf $ROOTDIR/src/* \
+    && apt-get update -y \
+    && apt-get remove -y --purge build-essential wget
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
