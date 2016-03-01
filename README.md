@@ -24,7 +24,7 @@ These are the available versions:
 Pulling image from DockerHub
 
 ```bash
-$ docker pull geographica/gdal2:2.0.1
+$ docker pull geographica/gdal2:2.0.2
 ```
 
 ## GDAL 2 info
