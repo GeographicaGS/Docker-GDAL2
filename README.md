@@ -2,17 +2,6 @@
 
 GDAL2 Docker images.
 
-## Building image clonning this repository
-Build image and run container (cloning this Git repository):
-
-```bash
-$ git clone https://github.com/GeographicaGS/docker-gdal2.git myfolder
-$ cd docker_gdal2
-$ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker build -t geographica/gdal2:2.1.0 .
-$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:2.1.0 /bin/bash
-```
-
 ## Versions
 The philosophy behind Git / Docker tags correlation we ended up using is simple: the master branch of this repo contains as many folders containing different Docker image builds as Docker tags we like to have. We don't use Git tags nor branches to try to correlate with Docker tags. We try this in the past and was a mess. Each version packages makes a folder, each folder builds a __geographica/gdal2__ Docker tag bundling different library versions.
 
