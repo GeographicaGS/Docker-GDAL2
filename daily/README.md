@@ -14,7 +14,7 @@ $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
 $ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:daily /bin/bash
 ```
 
-## Build the image own your own
+## Build the image on your own
 ```bash
 $ git clone https://github.com/GeographicaGS/docker-gdal2.git
 $ cd docker_gdal2
