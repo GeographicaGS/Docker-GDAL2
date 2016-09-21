@@ -22,6 +22,7 @@ $ docker build -t geographica/gdal2:daily .
 ```
 
 ## GDAL 2 info
+- http://download.osgeo.org/gdal/presentations/GDAL%202.1%20(FOSS4G%20Bonn%202016).pdf
 - https://2015.foss4g-na.org/session/gdal-20-overview
 - http://trac.osgeo.org/gdal/wiki/GDAL20Changes
 

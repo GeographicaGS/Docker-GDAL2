@@ -23,6 +23,7 @@ $ docker pull geographica/gdal2:latest
 [DockerHub repo link](https://hub.docker.com/r/geographica/gdal2/)
 
 ## GDAL 2 info
+- http://download.osgeo.org/gdal/presentations/GDAL%202.1%20(FOSS4G%20Bonn%202016).pdf
 - https://2015.foss4g-na.org/session/gdal-20-overview
 - http://trac.osgeo.org/gdal/wiki/GDAL20Changes
 
