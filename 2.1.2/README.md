@@ -1,9 +1,9 @@
 # Docker GDAL2
 
-GDAL2:2.1.1 Docker images.
+GDAL2:2.1.2 Docker images.
 
 ```bash
-docker run --rm -it geographica/gdal2:2.1.1
+docker run --rm -it geographica/gdal2:2.1.2
 ```
 
 Using a data volume
@@ -16,7 +16,7 @@ $ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:2.1.1 /bin/bash
 ```bash
 $ git clone https://github.com/GeographicaGS/docker-gdal2.git
 $ cd docker_gdal2
-$ docker build -t geographica/gdal2:2.1.1 .
+$ docker build -t geographica/gdal2:2.1.2 .
 ```
 
 ## GDAL 2 info
