@@ -9,7 +9,7 @@ docker run --rm -it geographica/gdal2:2.1.2
 Using a data volume
 ```bash
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:2.1.1 /bin/bash
+$ docker run $DATAFOLDER --name gdal2 -it --rm geographica/gdal2:2.1.2 /bin/bash
 ```
 
 ## Build the image on your own
