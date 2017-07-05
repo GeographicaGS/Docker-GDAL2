@@ -39,7 +39,7 @@ RUN apt-get update -y && apt-get install -y \
 
 # Compile and install GDAL
 
-RUN cd src/gdal-${GDAL_VERSION} && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
+RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
     && ./configure --with-python --with-spatialite --with-pg --with-curl \
     && make && make install && ldconfig \
     && apt-get update -y \
