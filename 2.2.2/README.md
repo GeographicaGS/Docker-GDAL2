@@ -1,6 +1,6 @@
 # Docker GDAL2
 
-GDAL2:2.2.2 Docker images.
+GDAL2:2.2.2 Docker images (with Python 3).
 
 ```bash
 docker run --rm -it geographica/gdal2:2.2.2

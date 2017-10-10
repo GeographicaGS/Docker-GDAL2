@@ -20,9 +20,12 @@ ADD http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz $
 RUN apt-get update -y && apt-get install -y \
     software-properties-common \
     python-software-properties \
+    python3-software-properties \
     build-essential \
     python-dev \
+    python3-dev \
     python-numpy \
+    python3-numpy \
     libspatialite-dev \
     sqlite3 \
     libpq-dev \
@@ -35,16 +38,19 @@ RUN apt-get update -y && apt-get install -y \
     libspatialite-dev \
     libhdf4-alt-dev \
     libhdf5-serial-dev \
-    wget
+    wget \
+    bash-completion
 
 # Compile and install GDAL
-
 RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
     && ./configure --with-python --with-spatialite --with-pg --with-curl \
     && make && make install && ldconfig \
     && apt-get update -y \
     && apt-get remove -y --purge build-essential wget \
-    && rm -Rf $ROOTDIR/src/*
+    && cd $ROOTDIR && cd src/gdal-${GDAL_VERSION}/swig/python \
+    && python3 setup.py build \
+    && python3 setup.py install \
+    && cd $ROOTDIR && rm -Rf src/gdal*
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
