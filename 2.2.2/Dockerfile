@@ -16,7 +16,7 @@ ENV OPENJPEG_VERSION 2.2.0
 WORKDIR $ROOTDIR/
 
 ADD http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz $ROOTDIR/src/
-ADD https://github.com/uclouvain/openjpeg/archive/v2.2.0.tar.gz $ROOTDIR/src/openjpeg-${OPENJPEG_VERSION}.tar.gz
+ADD https://github.com/uclouvain/openjpeg/archive/v${OPENJPEG_VERSION}.tar.gz $ROOTDIR/src/openjpeg-${OPENJPEG_VERSION}.tar.gz
 
 # Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
