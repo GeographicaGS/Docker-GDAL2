@@ -17,6 +17,7 @@ These are the available versions:
 - GDAL 2.2.2
 - GDAL 2.2.3
 - GDAL 2.2.4
+- GDAL 2.3.0
 - Daily - Nightly Snapshots; to test new features (use at your own risk!!).
 
 ## DockerHub
