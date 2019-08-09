@@ -24,15 +24,15 @@ These are the available versions:
 - GDAL 2.4.1
 - Daily - Nightly Snapshots; to test new features (use at your own risk!!).
 
-## DockerHub
-Pulling image from DockerHub (use "latest" or version*):
+## Docker Hub
+Pulling image from Docker Hub (use "latest" or version*):
 
 ```bash
 $ docker pull geographica/gdal2:latest
 ```
-*Daily is for testing purposes only, and is only available for building image directly from Dockerfile (not available for pulling from Dokerhub).
+* Daily is for testing purposes only, and is only available for building image directly from Dockerfile (not available for pulling from Docker Hub).
 
-[DockerHub repo link](https://hub.docker.com/r/geographica/gdal2/)
+[Docker Hub repo link](https://hub.docker.com/r/geographica/gdal2/)
 
 ## GDAL 2 info
 - http://download.osgeo.org/gdal/presentations/GDAL%202.1%20(FOSS4G%20Bonn%202016).pdf
