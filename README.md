@@ -23,6 +23,7 @@ These are the available versions:
 - GDAL 2.4.0
 - GDAL 2.4.1
 - GDAL 2.4.2
+- GDAL 2.4.3
 - Daily - Nightly Snapshots; to test new features (use at your own risk!!).
 
 ## Docker Hub
