@@ -38,6 +38,7 @@ RUN apt-get update -y && apt-get install -y \
     libspatialite-dev \
     libhdf4-alt-dev \
     libhdf5-serial-dev \
+    libmysqlclient-dev \
     bash-completion \
     cmake
 
@@ -50,7 +51,7 @@ RUN cd src && tar -xvf openjpeg-${OPENJPEG_VERSION}.tar.gz && cd openjpeg-${OPEN
 
 # Compile and install GDAL
 RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
-    && ./configure --with-python --with-spatialite --with-pg --with-curl --with-openjpeg \
+    && ./configure --with-python --with-spatialite --with-pg --with-curl --with-openjpeg --with-mysql \
     && make && make install && ldconfig \
     && apt-get update -y \
     && apt-get remove -y --purge build-essential \
